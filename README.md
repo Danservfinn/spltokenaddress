@@ -24,7 +24,7 @@ npm install -g spl-token-finder
 ### From Source
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/spl-token-finder.git
+git clone https://github.com/danservfinn/spltokenfinder.git
 cd spl-token-finder
 
 # Install dependencies
