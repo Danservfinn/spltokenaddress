@@ -24,8 +24,8 @@ npm install -g spl-token-finder
 ### From Source
 ```bash
 # Clone the repository
-git clone https://github.com/danservfinn/spltokenfinder.git
-cd spl-token-finder
+git clone https://github.com/Danservfinn/spltokenaddress.git
+cd spltokenaddress
 
 # Install dependencies
 npm install
@@ -236,6 +236,15 @@ npm run run-interactive
 # Or run directly
 ./run.sh      # Shell script (macOS/Linux)
 node run.js   # Node.js script (cross-platform)
+```
+
+### Client Distribution
+```bash
+# Create a client-ready package
+./client-package.sh
+
+# This creates a dist-client/ folder and spl-token-finder-client.zip
+# Perfect for sharing with clients who need the tool
 ```
 
 ### Programmatic Usage
