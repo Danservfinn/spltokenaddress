@@ -49,4 +49,8 @@ tokens.*
 *.tsbuildinfo
 
 # Package files
-*.tgz 
+*.tgz
+
+# Client distribution files
+dist-client/
+spl-token-finder-client.zip 
