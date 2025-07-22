@@ -31,12 +31,15 @@ async function main() {
     // Close readline interface
     rl.close();
     
-    // Run the built CLI directly to avoid npm output
-    const args = ['dist/cli.js', walletAddress.trim(), '--format', 'simple'];
+    // Run using npm dev to ensure it works from source
+    const args = ['run', 'dev', '--', walletAddress.trim(), '--format', 'simple'];
     
-    const child = spawn('node', args, {
-      stdio: 'inherit'
+    const child = spawn('npm', args, {
+      stdio: ['inherit', 'inherit', 'pipe']
     });
+    
+    // Suppress stderr to hide npm command output
+    child.stderr.on('data', () => {});
     
     child.on('close', (code) => {
       if (code !== 0) {

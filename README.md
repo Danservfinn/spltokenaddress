@@ -70,55 +70,55 @@ EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
 #### Quick Commands (Clean Output)
 ```bash
 # Simple format - just token addresses (cleanest)
-node dist/cli.js <wallet_address> --format simple
-
-# Using npm dev script
 npm run dev -- <wallet_address> --format simple
+
+# After building (npm run build)
+node dist/cli.js <wallet_address> --format simple
 ```
 
 #### All Format Options
 ```bash
 # Default list format with balances
-node dist/cli.js <wallet_address>
+npm run dev -- <wallet_address>
 
 # JSON format
-node dist/cli.js <wallet_address> --format json
+npm run dev -- <wallet_address> --format json
 
 # CSV format
-node dist/cli.js <wallet_address> --format csv
+npm run dev -- <wallet_address> --format csv
 
 # Table format
-node dist/cli.js <wallet_address> --format table
+npm run dev -- <wallet_address> --format table
 
 # Simple format (just addresses)
-node dist/cli.js <wallet_address> --format simple
+npm run dev -- <wallet_address> --format simple
 ```
 
 ### Examples with Real Address
 
 1. **Simple output (just token addresses)**
    ```bash
-   node dist/cli.js A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --format simple
+   npm run dev -- A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --format simple
    ```
 
 2. **Save to file**
    ```bash
-   node dist/cli.js A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --format simple --output tokens.txt
+   npm run dev -- A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --format simple --output tokens.txt
    ```
 
 3. **JSON output**
    ```bash
-   node dist/cli.js A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --format json
+   npm run dev -- A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --format json
    ```
 
 4. **Table format**
    ```bash
-   node dist/cli.js A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --format table
+   npm run dev -- A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --format table
    ```
 
 5. **Custom RPC endpoint**
    ```bash
-   node dist/cli.js A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --rpc https://your-rpc-endpoint.com --format simple
+   npm run dev -- A7Kj5g44rEtXHNbdRRSMZ9eDk6Z66XGzjxvZDt1zTWdD --rpc https://your-rpc-endpoint.com --format simple
    ```
 
 6. **Pipe to other commands**
@@ -209,7 +209,7 @@ So11111111111111111111111111111111111111112
 # Install dependencies
 npm install
 
-# Build the project (required for interactive scripts)
+# Build the project (optional - for production use)
 npm run build
 ```
 
@@ -273,7 +273,6 @@ See the `examples/` directory for more detailed examples.
    git clone https://github.com/Danservfinn/spltokenaddress.git
    cd spltokenaddress
    npm install
-   npm run build
    ```
 
 2. **Run the interactive script:**
@@ -284,7 +283,7 @@ See the `examples/` directory for more detailed examples.
 
 3. **Or use direct command:**
    ```bash
-   node dist/cli.js <wallet-address> --format simple
+   npm run dev -- <wallet-address> --format simple
    ```
 
 That's it! The app will validate the address, connect to Solana, fetch the tokens, and output just the token mint addresses.

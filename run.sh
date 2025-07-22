@@ -9,5 +9,5 @@ if [ -z "$wallet_address" ]; then
     exit 1
 fi
 
-# Run the built CLI directly to avoid npm output
-node dist/cli.js "$wallet_address" --format simple 
+# Run using npm dev to ensure it works from source
+npm run dev -- "$wallet_address" --format simple 2>/dev/null 
