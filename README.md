@@ -261,8 +261,8 @@ See the `examples/` directory for more detailed examples.
 
 1. **Clone and setup:**
    ```bash
-   git clone <repository-url>
-   cd solspltokenaddress
+   git clone https://github.com/Danservfinn/spltokenaddress.git
+   cd spltokenaddress
    npm install
    npm run build
    ```
@@ -317,4 +317,4 @@ MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Support
 
-For issues, questions, or contributions, please visit the [GitHub repository](https://github.com/yourusername/spl-token-finder). 
+For issues, questions, or contributions, please visit the [GitHub repository](https://github.com/Danservfinn/spltokenaddress). 

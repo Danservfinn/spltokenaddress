@@ -8,11 +8,11 @@
 
 1. **Download the project:**
    - Download and extract the ZIP file, or
-   - Clone with git: `git clone <repository-url>`
+   - Clone with git: `git clone https://github.com/Danservfinn/spltokenaddress.git`
 
 2. **Navigate to the project folder:**
    ```bash
-   cd solspltokenaddress
+   cd spltokenaddress
    ```
 
 3. **Install dependencies:**
